@@ -7,6 +7,7 @@ async function getWeather(place){
     const lowTemp = weatherInfo.days[0].tempmin
     const temp = weatherInfo.days[0].temp
     const description = weatherInfo.days[0].description
+    
 }
 
 
@@ -17,9 +18,10 @@ const weatherButton = document.getElementById("Black")
 const weatherInput = document.getElementById("Place")
 const weatherDiv = document.createElement("div")
 
-weatherButton.addEventListener("click", ()=> {
-    weather = getWeather(weatherInput.value)
-    console.log(weather)
+weatherButton.addEventListener("click", (e)=> {
+    e.preventDefault();
+    getWeather(weatherInput.value)
 })
+
 
 
