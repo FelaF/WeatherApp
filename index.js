@@ -7,24 +7,19 @@ async function getWeather(place){
     const lowTemp = weatherInfo.days[0].tempmin
     const temp = weatherInfo.days[0].temp
     const description = weatherInfo.days[0].description
-    console.log(weatherInfo)
-    console.log(highTemp)
-    console.log(datetime)
-    console.log(lowTemp)
-    console.log(temp)
-    console.log(description)
-    console.log(location)
 }
 
 
 getWeather("Carson, CA")
 getWeather("Charlotte, NC")
+const weatherForm = document.getElementById("myForm")
+const weatherButton = document.getElementById("Black")
 const weatherInput = document.getElementById("Place")
-const submitButtonforWeather = document.getElementById("Snake")
-
 const weatherDiv = document.createElement("div")
 
-submitButtonforWeather.addEventListener("click",() =>{
-    e.preventDefault
-
+weatherButton.addEventListener("click", ()=> {
+    weather = getWeather(weatherInput.value)
+    console.log(weather)
 })
+
+
